@@ -67,14 +67,14 @@ toValue:e||-22,
 duration:150}).
 start();
 _reactNative.Animated.timing(this.state.opacAnim,{
-toValue:0.7,
+toValue:1,
 duration:150}).
 start();
 }},{key:"renderLabel",value:function renderLabel(
 
 label,labelProps){
 var newLabel=[];
-var labelStyle=_reactNative.StyleSheet.flatten({fontSize:15,lineHeight:30},labelProps.style);
+var labelStyle=_reactNative.StyleSheet.flatten([{fontSize:15,lineHeight:30},labelProps.style]);
 if(this.props.floatingLabel){
 if(this.state.isFocused){
 newLabel.push(
