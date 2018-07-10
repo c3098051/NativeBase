@@ -73,17 +73,17 @@ class Item extends Component {
       duration: 150
     }).start();
     Animated.timing(this.state.opacAnim, {
-      toValue: 0.7,
+      toValue: 1,
       duration: 150
     }).start();
   }
 
   renderLabel(label, labelProps) {
     const newLabel = [];
-    let labelStyle = StyleSheet.flatten(
+    let labelStyle = StyleSheet.flatten([
       { fontSize: 15, lineHeight: 30 },
       labelProps.style
-    );
+    ]);
     if (this.props.floatingLabel) {
       if (this.state.isFocused) {
         newLabel.push(
