@@ -26,14 +26,14 @@ class ToastContainer extends Component {
       opacity: this.state.fadeAnim,
       width: "100%",
       elevation: 9,
-      paddingHorizontal: Platform.OS === "ios" ? 20 : 0,
+      paddingHorizontal: Platform.OS === "ios" ? 0 : 0,
       top: this.state.position === "top" ? this.getTop() : undefined,
       bottom: this.state.position === "bottom" ? this.getTop() : undefined
     };
   }
   getTop() {
     if (Platform.OS === "ios") {
-      return 30;
+      return 0;
     } else {
       return 0;
     }
